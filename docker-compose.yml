@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  webflux-db:
+    image: postgres:13.1-alpine
+    container_name: webflux-db
+    ports:
+      - 5435:5432
+    restart: always
+    environment:
+      - POSTGRES_USER=userdb
+      - POSTGRES_PASSWORD=pwddb
+      - POSTGRES_DB=companydb

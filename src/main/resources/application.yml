@@ -1,0 +1,24 @@
+webflux:
+  database:
+    host: localhost
+    port: 5435
+    name: companydb
+    schema: public
+    username: userdb
+    password: pwddb
+    pool:
+      size:
+        initial: 3
+        max: 10
+
+spring:
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5435/companydb
+    user: userdb
+    password: pwddb
+    baseline-version: 0
+
+server:
+  port: 8081
+
